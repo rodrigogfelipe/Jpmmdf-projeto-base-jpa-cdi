@@ -49,3 +49,4 @@ public Optional<List<T>> getList() {
 }
 ~~~
  
+# Jpmmdf-projeto-base-jpa-cdi
