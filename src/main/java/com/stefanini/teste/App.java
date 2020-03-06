@@ -7,6 +7,7 @@ import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
 import javax.inject.Inject;
 
+import com.stefanini.model.Endereco;
 import com.stefanini.model.Pessoa;
 import com.stefanini.servico.PessoaServico;
 
@@ -30,8 +31,7 @@ public class App {
 //		salvar();
 //		remover();
 	}
-	
-	
+
 	private void remover() {
 		servico.remover(5L);
 	}
@@ -58,9 +58,12 @@ public class App {
 
 	public void salvar() {
 
-//		Pessoa pessoa = new Pessoa("JOAO", LocalDate.of(1995, 8, 24));
-//		pessoa.setEmail("joaom.dev@hotmail.com");
-//		servico.salvar(pessoa);
+		Pessoa pessoa = new Pessoa("Rodrigo", "rodrigogfelipe@hotmail.com", LocalDate.of(1986, 7, 16), true);
+		pessoa.setEmail("rodrigogfelipe@hotmail.com");
+		servico.salvar(pessoa);
+
+		Endereco endereco = new Endereco("73015999", "DF", "Brasilia", "Sobradinho", "BR020", "Quadra01", pessoa);
+		servico.salvar(pessoa);
 
 	}
 
