@@ -109,12 +109,7 @@ public class Perfil implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((dsPerfil == null) ? 0 : dsPerfil.hashCode());
-		result = prime * result + ((horaAlteracao == null) ? 0 : horaAlteracao.hashCode());
-		result = prime * result + ((horaInclusao == null) ? 0 : horaInclusao.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((noPerfil == null) ? 0 : noPerfil.hashCode());
-		result = prime * result + ((pessoaPerfil == null) ? 0 : pessoaPerfil.hashCode());
 		return result;
 	}
 
@@ -127,35 +122,10 @@ public class Perfil implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Perfil other = (Perfil) obj;
-		if (dsPerfil == null) {
-			if (other.dsPerfil != null)
-				return false;
-		} else if (!dsPerfil.equals(other.dsPerfil))
-			return false;
-		if (horaAlteracao == null) {
-			if (other.horaAlteracao != null)
-				return false;
-		} else if (!horaAlteracao.equals(other.horaAlteracao))
-			return false;
-		if (horaInclusao == null) {
-			if (other.horaInclusao != null)
-				return false;
-		} else if (!horaInclusao.equals(other.horaInclusao))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
-			return false;
-		if (noPerfil == null) {
-			if (other.noPerfil != null)
-				return false;
-		} else if (!noPerfil.equals(other.noPerfil))
-			return false;
-		if (pessoaPerfil == null) {
-			if (other.pessoaPerfil != null)
-				return false;
-		} else if (!pessoaPerfil.equals(other.pessoaPerfil))
 			return false;
 		return true;
 	}
